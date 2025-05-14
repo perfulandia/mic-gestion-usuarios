@@ -25,7 +25,7 @@ public class SesionController {
         List<Sesion> sesiones = sesionService.findAll();
 
         if (!sesiones.isEmpty()) {
-            return new ResponseEntity<>(sesiones, HttpStatus.OK); // devuelve la entidad con un status http
+            return new ResponseEntity<>(sesiones, HttpStatus.OK); 
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
@@ -33,7 +33,7 @@ public class SesionController {
     @PostMapping
     public ResponseEntity<Sesion> saveSesion(@RequestBody Sesion sesion) {
 
-        if (sesion != null && !sesionService.existsByToken(sesion.getToken())) {
+        if (sesion != null && !sesionService.existsByToken(sesion.getToken())) { //recordar que el token es un String, no un int
 
             return new ResponseEntity<>(sesionService.save(sesion), HttpStatus.OK);
         }
