@@ -1,4 +1,4 @@
-package com.hospital.orm4.model;
+package com.gesionUsuario.orm4.model;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package com.hospital.orm4.controller;
+package com.gesionUsuario.orm4.controller;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hospital.orm4.model.Usuario;
-import com.hospital.orm4.service.UsuarioService;
+import com.gesionUsuario.orm4.model.Usuario;
+import com.gesionUsuario.orm4.service.UsuarioService;
 
 @RestController
-@RequestMapping("/api/v1/usuario")
+@RequestMapping("/api/usuario")
 public class UsuarioController {
 
     @Autowired

@@ -1,12 +1,12 @@
-package com.hospital.orm4.repository;
+package com.gesionUsuario.orm4.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.hospital.orm4.model.Usuario;
+import com.gesionUsuario.orm4.model.Usuario;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     
     List<Usuario> findAll();
     
@@ -14,4 +14,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     Usuario save(Usuario paciente);
     
     Boolean existsById(int id);
+    
 }

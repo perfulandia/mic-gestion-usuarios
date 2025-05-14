@@ -1,4 +1,4 @@
-package com.hospital.orm4.model;
+package com.gesionUsuario.orm4.model;
 
 import java.util.Date;
 
@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 
 public class Sesion {
     

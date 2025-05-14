@@ -1,28 +1,28 @@
-package com.hospital.orm4.service;
+package com.gesionUsuario.orm4.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hospital.orm4.model.Usuario;
-import com.hospital.orm4.repository.UsuarioRepository;
+import com.gesionUsuario.orm4.model.Usuario;
+import com.gesionUsuario.orm4.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
 
     @Autowired
-    private UsuarioRepository pacienteRepository;
+    private UsuarioRepository usuarioRepository;
 
     public List<Usuario> findAll(){
-        return pacienteRepository.findAll();
+        return usuarioRepository.findAll();
     }
     
     public Usuario save(Usuario usuario){
-        return pacienteRepository.save(usuario);
+        return usuarioRepository.save(usuario);
     }
 
     public Boolean existsById(int id){
-        return pacienteRepository.existsById(id);
+        return usuarioRepository.existsById(id);
     }
 }
