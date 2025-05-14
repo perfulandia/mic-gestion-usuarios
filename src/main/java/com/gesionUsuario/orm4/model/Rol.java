@@ -1,6 +1,4 @@
 package com.gesionUsuario.orm4.model;
-
-
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -19,31 +17,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "usuario")
+@Table(name = "rol")
 
-public class Usuario {
-    @Id // asigna primary key
+public class Rol {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUsuario;
+    private int idRol;
     
     @Column(length = 50, nullable = false)
-    private String nombre;
-
-    @Column(length = 13, nullable = false, unique = true)
-    private String rutUsuario;
-
-    @Column(length = 250, nullable = false)
-    private String email;
-
-    @Column(length = 50, nullable = false)
-    private String contrasena;
-
-    @Column(length = 12, nullable = true)
-    private String telefono;
-
-    @Column(nullable = false)
-    private Boolean activo;
-
-    @OneToMany(mappedBy = "idRol", cascade = CascadeType.ALL)
-    List<Rol> roles;
+    private String nombreRol;
+    
+    @OneToMany(mappedBy = "idPermiso", cascade = CascadeType.ALL)
+    List<Permiso> permisos;
 }
+
