@@ -15,28 +15,28 @@ import com.hospital.orm4.model.Usuario;
 import com.hospital.orm4.service.UsuarioService;
 
 @RestController
-@RequestMapping("/api/v1/pacientes")
+@RequestMapping("/api/v1/usuario")
 public class UsuarioController {
 
     @Autowired
-    private UsuarioService pacienteService;
+    private UsuarioService usuarioService;
 
     @GetMapping
-    public ResponseEntity<List<Usuario>> getPacientes() { // mapea la tabla desde la db
-        List<Usuario> pacientes = pacienteService.findAll();
+    public ResponseEntity<List<Usuario>> getUsuarios() { // mapea la tabla desde la db
+        List<Usuario> usuarios = usuarioService.findAll();
 
-        if (!pacientes.isEmpty()) {
-            return new ResponseEntity<>(pacientes, HttpStatus.OK); // devuelve la entidad con un status http
+        if (!usuarios.isEmpty()) {
+            return new ResponseEntity<>(usuarios, HttpStatus.OK); // devuelve la entidad con un status http
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PostMapping
-    public ResponseEntity<Usuario> savePaciente(@RequestBody Usuario paciente) {
+    public ResponseEntity<Usuario> saveUsuario(@RequestBody Usuario usuario) {
 
-        if (paciente != null && !pacienteService.existsById(paciente.getId())) {
+        if (usuario != null && !usuarioService.existsById(usuario.getIdUsuario())) {
 
-            return new ResponseEntity<>(pacienteService.save(paciente), HttpStatus.OK);
+            return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
