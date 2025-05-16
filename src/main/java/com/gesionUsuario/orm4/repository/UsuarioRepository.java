@@ -11,8 +11,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     List<Usuario> findAll();
     
     @SuppressWarnings("unchecked")
-    Usuario save(Usuario paciente);
+    Usuario save(Usuario usuario);
     
     Boolean existsById(int id);
+    
     
 }

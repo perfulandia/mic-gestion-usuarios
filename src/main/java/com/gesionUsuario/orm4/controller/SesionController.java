@@ -21,7 +21,7 @@ public class SesionController {
     private SesionService sesionService;
 
     @GetMapping
-    public ResponseEntity<List<Sesion>> getSesions() { // mapea la tabla desde la db
+    public ResponseEntity<List<Sesion>> getSesiones() { // mapea la tabla desde la db
         List<Sesion> sesiones = sesionService.findAll();
 
         if (!sesiones.isEmpty()) {
@@ -31,7 +31,7 @@ public class SesionController {
     }
 
     @PostMapping
-    public ResponseEntity<Sesion> saveSesion(@RequestBody Sesion sesion) {
+    public ResponseEntity<Sesion> crearSesion(@RequestBody Sesion sesion) {
 
         if (sesion != null && !sesionService.existsByToken(sesion.getToken())) { //recordar que el token es un String, no un int
 

@@ -18,7 +18,7 @@ public class PermisoController {
     private PermisoService permisoService;
 
     @GetMapping
-    public ResponseEntity<List<Permiso>> getUsuarios() { 
+    public ResponseEntity<List<Permiso>> getPermisos() { 
         List<Permiso> permisos = permisoService.findAll();
 
         if (!permisos.isEmpty()) {
@@ -28,7 +28,7 @@ public class PermisoController {
     }
 
     @PostMapping
-    public ResponseEntity<Permiso> saveUsuario(@RequestBody Permiso permisos) {
+    public ResponseEntity<Permiso> crearPermiso(@RequestBody Permiso permisos) {
 
         if (permisos != null && !permisoService.existsById(permisos.getIdPermiso())) {
 

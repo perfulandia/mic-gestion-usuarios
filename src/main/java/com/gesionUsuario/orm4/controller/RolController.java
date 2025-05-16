@@ -22,7 +22,7 @@ public class RolController {
     private RolService rolService;
 
     @GetMapping
-    public ResponseEntity<List<Rol>> getUsuarios() { 
+    public ResponseEntity<List<Rol>> getRoles() { 
         List<Rol> roles = rolService.findAll();
 
         if (!roles.isEmpty()) {
@@ -32,7 +32,7 @@ public class RolController {
     }
 
     @PostMapping
-    public ResponseEntity<Rol> saveUsuario(@RequestBody Rol roles) {
+    public ResponseEntity<Rol> crearRol(@RequestBody Rol roles) {
 
         if (roles != null && !rolService.existsById(roles.getIdRol())) {
 
