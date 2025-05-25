@@ -47,23 +47,23 @@ public class UsuarioController {
         return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @PostMapping("/{idUsuario}/asignar-rol")
-    public ResponseEntity<Usuario> asignarRolAUsuario(
-        @PathVariable Integer idUsuario,
-        @RequestParam Integer idRol) {
+    // @PostMapping("/{idUsuario}/asignar-rol")
+    // public ResponseEntity<Usuario> asignarRolAUsuario(
+    //     @PathVariable Integer idUsuario,
+    //     @RequestParam Integer idRol) {
         
-        Usuario usuario = usuarioService.existsById(idUsuario).orElse(null);
-        if (usuario == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    //     Usuario usuario = usuarioService.existsById(idUsuario).orElse(null);
+    //     if (usuario == null) {
+    //         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    //     }
         
-        Rol rol = RolService.existsById(idRol).orElse(null);
-        if (rol == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+    //     Rol rol = RolService.existsById(idRol).orElse(null);
+    //     if (rol == null) {
+    //         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    //     }
         
-        usuario.setRol(rol);
-        return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.OK);
-    }
+    //     usuario.setRol(rol);
+    //     return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.OK);
+    // }
     
 }
