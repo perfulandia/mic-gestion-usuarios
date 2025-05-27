@@ -5,6 +5,7 @@ import com.gesionUsuario.orm4.model.Rol;
 
 public interface RolRepository extends JpaRepository<Rol, Integer>{
     
+
     @SuppressWarnings("null")
     List<Rol> findAll();
     

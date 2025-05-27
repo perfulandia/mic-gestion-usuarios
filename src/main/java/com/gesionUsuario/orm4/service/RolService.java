@@ -14,6 +14,7 @@ public class RolService {
     @Autowired
     private RolRepository rolRepository;
 
+
     public List<Rol> findAll(){
         return rolRepository.findAll();
     }
