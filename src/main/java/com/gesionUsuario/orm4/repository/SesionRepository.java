@@ -5,9 +5,10 @@ import com.gesionUsuario.orm4.model.Sesion;
 
 public interface SesionRepository extends JpaRepository<Sesion, String>{
     
+    @SuppressWarnings("null")
     List<Sesion> findAll();
     
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "null" })
     Sesion save(Sesion sesion);
     
     Boolean existsByToken(String token);

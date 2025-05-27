@@ -6,9 +6,10 @@ import com.gesionUsuario.orm4.model.Permiso;
 
 public interface PermisoRepository extends JpaRepository<Permiso, Integer>{
     
+    @SuppressWarnings("null")
     List<Permiso> findAll();
     
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "null" })
     Permiso save(Permiso permiso);
     
     Boolean existsById(int id);

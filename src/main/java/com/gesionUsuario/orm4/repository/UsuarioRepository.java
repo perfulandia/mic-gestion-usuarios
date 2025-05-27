@@ -8,9 +8,10 @@ import com.gesionUsuario.orm4.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     
+    @SuppressWarnings("null")
     List<Usuario> findAll();
     
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "null" })
     Usuario save(Usuario usuario);
     
     Boolean existsById(int id);
