@@ -1,4 +1,4 @@
-package com.gesionUsuario.orm4.model;
+package com.gestionUsuario.orm4.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.gesionUsuario.orm4.controller;
+package com.gestionUsuario.orm4.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gesionUsuario.orm4.model.Permiso;
-import com.gesionUsuario.orm4.service.PermisoService;
+import com.gestionUsuario.orm4.model.Permiso;
+import com.gestionUsuario.orm4.service.PermisoService;
 @RequestMapping("/api/permiso")
 @RestController
 public class PermisoController {

@@ -1,12 +1,12 @@
-package com.gesionUsuario.orm4.service;
+package com.gestionUsuario.orm4.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gesionUsuario.orm4.model.Permiso;
-import com.gesionUsuario.orm4.repository.PermisoRepository;
+import com.gestionUsuario.orm4.model.Permiso;
+import com.gestionUsuario.orm4.repository.PermisoRepository;
 
 @Service
 public class PermisoService {

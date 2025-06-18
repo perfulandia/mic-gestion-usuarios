@@ -1,12 +1,12 @@
-package com.gesionUsuario.orm4.service;
+package com.gestionUsuario.orm4.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gesionUsuario.orm4.model.Rol;
-import com.gesionUsuario.orm4.repository.RolRepository;
+import com.gestionUsuario.orm4.model.Rol;
+import com.gestionUsuario.orm4.repository.RolRepository;
 
 @Service
 public class RolService {

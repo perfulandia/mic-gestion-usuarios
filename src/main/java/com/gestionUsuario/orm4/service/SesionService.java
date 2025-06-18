@@ -1,12 +1,12 @@
-package com.gesionUsuario.orm4.service;
+package com.gestionUsuario.orm4.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gesionUsuario.orm4.model.Sesion;
-import com.gesionUsuario.orm4.repository.SesionRepository;
+import com.gestionUsuario.orm4.model.Sesion;
+import com.gestionUsuario.orm4.repository.SesionRepository;
 
 @Service
 public class SesionService {

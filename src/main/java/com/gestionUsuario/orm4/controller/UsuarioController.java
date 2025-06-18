@@ -1,4 +1,4 @@
-package com.gesionUsuario.orm4.controller;
+package com.gestionUsuario.orm4.controller;
 
 import java.util.List;
 
@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.gesionUsuario.orm4.model.Usuario;
-import com.gesionUsuario.orm4.service.UsuarioService;
+
+import com.gestionUsuario.orm4.model.Usuario;
+import com.gestionUsuario.orm4.service.UsuarioService;
 
 
 @RestController

@@ -1,11 +1,11 @@
-package com.gesionUsuario.orm4.repository;
+package com.gestionUsuario.orm4.repository;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.gesionUsuario.orm4.model.Usuario;
+import com.gestionUsuario.orm4.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     

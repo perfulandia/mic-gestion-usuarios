@@ -1,4 +1,4 @@
-package com.gesionUsuario.orm4;
+package com.gestionUsuario.orm4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
