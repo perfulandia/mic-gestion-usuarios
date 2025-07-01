@@ -1,10 +1,9 @@
 package com.gestionUsuario.orm4.assemblers;
 
-import com.gestionUsuario.orm4.controller.UsuarioController; // Importa tu controlador
+import com.gestionUsuario.orm4.controller.UsuarioController;
 import com.gestionUsuario.orm4.model.Usuario;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
@@ -14,7 +13,7 @@ public class UsuarioModelAssembler implements RepresentationModelAssembler<Usuar
 
     @SuppressWarnings("null")
     @Override
-    public EntityModel<Usuario> toModel(@NonNull Usuario usuario) {
+    public EntityModel<Usuario> toModel(Usuario usuario) {
         // Un EntityModel contiene el objeto original (usuario) y los enlaces
         return EntityModel.of(usuario,
                 // Enlace "self": apunta al propio recurso del usuario
