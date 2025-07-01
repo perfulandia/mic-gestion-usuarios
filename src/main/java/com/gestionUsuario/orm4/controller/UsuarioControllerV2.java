@@ -42,7 +42,7 @@ public class UsuarioControllerV2 {
                 .map(assembler::toModel) // Usa el assembler para convertir cada Usuario a EntityModel
                 .collect(Collectors.toList());
 
-        // Envuelve la lista de EntityModel en un CollectionModel y añade un enlace "self" a la colección
+        // Envuelve la lista de EntityModel en un CollectionModel
         CollectionModel<EntityModel<Usuario>> collectionModel = CollectionModel.of(usuarios,
                 linkTo(methodOn(UsuarioController.class).getUsuarios()).withSelfRel());
 
@@ -74,7 +74,7 @@ public class UsuarioControllerV2 {
                 .body(assembler.toModel(nuevoUsuario));
     }
 
-    // --- Actualizar un usuario existente
+    // Actualizar un usuario existente
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE) // Especifica que produce HAL+JSON
     public ResponseEntity<EntityModel<Usuario>> actualizarUsuario(@PathVariable int id, @RequestBody Usuario usuario) {
         // Asegurarse de que el ID del path coincida con el ID del objeto

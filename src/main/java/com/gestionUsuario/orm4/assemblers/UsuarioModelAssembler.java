@@ -14,7 +14,7 @@ public class UsuarioModelAssembler implements RepresentationModelAssembler<Usuar
     @SuppressWarnings("null")
     @Override
     public EntityModel<Usuario> toModel(Usuario usuario) {
-        // Un EntityModel contiene el objeto original (usuario) y los enlaces
+        // Un EntityModel contiene al usuarios y sus enlaces
         return EntityModel.of(usuario,
                 // Enlace "self": apunta al propio recurso del usuario
                 linkTo(methodOn(UsuarioController.class).getUsuarioById(usuario.getIdUsuario())).withSelfRel(),
